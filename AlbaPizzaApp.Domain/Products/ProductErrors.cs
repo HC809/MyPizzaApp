@@ -5,4 +5,5 @@ public static class ProductErrors
 {
     public static readonly Error ExistsDescription = new("Product.ExistsDescription", "Ya existe un producto con la descripción proporcionada.");
     public static readonly Error NotFound = new("Product.NotFound", "No existe un producto con la ID proporcionado.");
+    public static readonly Error NotValidTaxType = new("Product.NotValidTaxType", "El tipo de impuesto proporcionado no es válido.");
 }
