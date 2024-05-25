@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace AlbaPizzaApp.Infraestructure;
 public static class DIContainer
 {
-    public static IServiceCollection AddDataAccess(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfraestructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("AlbaPizzaDb") ?? throw new ArgumentNullException(nameof(configuration));
 
