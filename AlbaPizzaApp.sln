@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.Infraestructure", "AlbaPizzaApp.DataAccess\AlbaPizzaApp.Infraestructure.csproj", "{6F62E25F-CBEE-43E7-94B9-3CED73A6A648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.Aplication", "AlbaPizzaApp.Aplication\AlbaPizzaApp.Aplication.csproj", "{D3B38342-0C82-41B8-877C-F1024A5A8371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.Aplication", "AlbaPizzaApp.Aplication\AlbaPizzaApp.Aplication.csproj", "{D3B38342-0C82-41B8-877C-F1024A5A8371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.API", "AlbaPizzaApp.API\AlbaPizzaApp.API.csproj", "{B72CB6FA-E0A5-42B5-B338-7F71B4F5C493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.API", "AlbaPizzaApp.API\AlbaPizzaApp.API.csproj", "{B72CB6FA-E0A5-42B5-B338-7F71B4F5C493}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.Domain", "AlbaPizzaApp.Domain\AlbaPizzaApp.Domain.csproj", "{C9F2EA55-CFD6-413E-A380-C7609E817FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.Domain", "AlbaPizzaApp.Domain\AlbaPizzaApp.Domain.csproj", "{C9F2EA55-CFD6-413E-A380-C7609E817FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6F62E25F-CBEE-43E7-94B9-3CED73A6A648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F62E25F-CBEE-43E7-94B9-3CED73A6A648}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F62E25F-CBEE-43E7-94B9-3CED73A6A648}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F62E25F-CBEE-43E7-94B9-3CED73A6A648}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3B38342-0C82-41B8-877C-F1024A5A8371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3B38342-0C82-41B8-877C-F1024A5A8371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B38342-0C82-41B8-877C-F1024A5A8371}.Release|Any CPU.ActiveCfg = Release|Any CPU
