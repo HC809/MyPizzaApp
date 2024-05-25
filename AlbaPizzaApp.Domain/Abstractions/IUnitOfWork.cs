@@ -1,4 +1,4 @@
-﻿namespace AlbaPizza.Domain.Abstractions;
+﻿namespace AlbaPizzaApp.Domain.Abstractions;
 public interface IUnitOfWork
 {
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);

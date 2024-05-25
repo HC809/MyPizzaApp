@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace AlbaPizza.Domain.Abstractions;
+namespace AlbaPizzaApp.Domain.Abstractions;
 public class Result
 {
     protected internal Result(bool isSuccess, Error error)

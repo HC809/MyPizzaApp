@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.API", "AlbaPiz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.Domain", "AlbaPizzaApp.Domain\AlbaPizzaApp.Domain.csproj", "{C9F2EA55-CFD6-413E-A380-C7609E817FED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.Infraestructure", "AlbaPizzaApp.Infraestructure\AlbaPizzaApp.Infraestructure.csproj", "{D519F511-40BC-497F-9AC7-645AD3BAFBF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C9F2EA55-CFD6-413E-A380-C7609E817FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9F2EA55-CFD6-413E-A380-C7609E817FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9F2EA55-CFD6-413E-A380-C7609E817FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D519F511-40BC-497F-9AC7-645AD3BAFBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D519F511-40BC-497F-9AC7-645AD3BAFBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D519F511-40BC-497F-9AC7-645AD3BAFBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D519F511-40BC-497F-9AC7-645AD3BAFBF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

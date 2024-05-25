@@ -1,6 +1,6 @@
-﻿using AlbaPizza.Domain.Abstractions;
+﻿using AlbaPizzaApp.Domain.Abstractions;
 
-namespace AlbaPizza.Domain.Products;
+namespace AlbaPizzaApp.Domain.Products;
 public static class ProductErrors
 {
     public static readonly Error ExistsDescription = new("Product.ExistsDescription", "Ya existe un producto con la descripción proporcionada.");

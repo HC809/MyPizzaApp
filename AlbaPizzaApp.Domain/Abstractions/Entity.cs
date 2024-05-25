@@ -1,4 +1,4 @@
-﻿namespace AlbaPizza.Domain.Abstractions;
+﻿namespace AlbaPizzaApp.Domain.Abstractions;
 public abstract class Entity
 {
     protected Entity(Guid id)

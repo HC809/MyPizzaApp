@@ -1,7 +1,6 @@
-﻿using AlbaPizza.Domain.Abstractions;
-using AlbaPizzaApp.Domain.Products;
+﻿using AlbaPizzaApp.Domain.Abstractions;
 
-namespace AlbaPizza.Domain.Products;
+namespace AlbaPizzaApp.Domain.Products;
 public sealed class Product : Entity
 {
     private Product(Guid id, string description, decimal price, ProductTaxType taxType) : base(id)
