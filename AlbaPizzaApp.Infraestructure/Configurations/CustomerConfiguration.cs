@@ -22,6 +22,12 @@ internal sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
         builder.Property(x => x.Phone)
             .IsRequired()
             .HasMaxLength(8);
+
+        builder.HasIndex(x => x.Email)
+             .IsUnique();
+
+        builder.HasIndex(x => x.Phone)
+            .IsUnique();
     }
 }
 
