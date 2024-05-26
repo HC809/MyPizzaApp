@@ -26,6 +26,19 @@ internal sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
             .IsRequired()
             .HasPrecision(18, 2);
 
+        builder.Property(x => x.Status)
+            .IsRequired()
+            .HasConversion(
+                status => status.ToString(),
+                value => (OrderStatus)Enum.Parse(typeof(OrderStatus), value)
+            );
+
+        builder.Property(x => x.ConfirmDate)
+            .IsRequired();
+
+        builder.Property(x => x.CancelDate)
+            .IsRequired();
+
         builder.Property(x => x.CustomerId)
             .IsRequired();
 
