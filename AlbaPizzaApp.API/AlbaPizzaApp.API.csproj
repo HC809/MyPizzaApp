@@ -20,4 +20,8 @@
     <ProjectReference Include="..\AlbaPizzaApp.Infraestructure\AlbaPizzaApp.Infraestructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

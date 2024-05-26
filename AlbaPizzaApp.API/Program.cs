@@ -1,5 +1,6 @@
 using AlbaPizzaApp.API.Middlewares;
 using AlbaPizzaApp.Infraestructure;
+using AlbaPizzaApp.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfraestructure(builder.Configuration);
+builder.Services.AddApplication();
 
 builder.Services.AddProblemDetails();
 
