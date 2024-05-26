@@ -18,6 +18,8 @@ public sealed class Order : Entity
     public decimal TaxAmount { get; private set; }
     public decimal TotalAmount { get; private set; }
     public OrderStatus Status { get; private set; }
+    public DateTime ConfirmDate { get; private set; }
+    public DateTime CancelDate { get; private set; }
     public ICollection<OrderDetail> OrderDetails { get; private set; }
 
     public static Order Create(Guid customerId, DateTime orderDate)
@@ -38,22 +40,24 @@ public sealed class Order : Entity
         TotalAmount = OrderDetails.Sum(od => od.PriceWithTax);
     }
 
-    public Result Confirm()
+    public Result Confirm(DateTime date)
     {
         if (Status != OrderStatus.Pending)
             return Result.Failure(OrderErrors.NotPending);
 
         Status = OrderStatus.Confirmed;
+        ConfirmDate = date;
 
         return Result.Success();
     }
 
-    public Result Cancel()
+    public Result Cancel(DateTime date)
     {
         if (Status == OrderStatus.Cancelled)
             return Result.Failure(OrderErrors.AlreadyCanceled);
 
         Status = OrderStatus.Cancelled;
+        CancelDate = date;
 
         return Result.Success();
     }
