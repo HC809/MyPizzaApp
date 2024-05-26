@@ -6,6 +6,10 @@ using AlbaPizzaApp.Domain.Products;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using AlbaPizzaApp.Domain.Customers;
+using AlbaPizzaApp.Domain.Addresses;
+using AlbaPizzaApp.Domain.Orders;
+using AlbaPizzaApp.Domain.OrderDetails;
 
 namespace AlbaPizzaApp.Infraestructure;
 public static class DIContainer
@@ -19,6 +23,10 @@ public static class DIContainer
         services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
 
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<ICustomerRepository, CustomerRepository>();
+        services.AddScoped<IAddressRepository, AddressRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 
         return services;
     }
