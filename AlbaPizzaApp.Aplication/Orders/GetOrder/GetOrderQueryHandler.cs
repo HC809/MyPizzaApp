@@ -22,6 +22,7 @@ internal sealed class GetOrderByIdQueryHandler : IQueryHandler<GetOrderByIdQuery
             SELECT 
                 Id, 
                 CustomerId, 
+                AddressId,
                 OrderDate, 
                 Subtotal, 
                 TaxAmount, 

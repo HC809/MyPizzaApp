@@ -3,6 +3,7 @@ public sealed class OrderResponse
 {
     public Guid Id { get; init; }
     public Guid CustomerId { get; init; }
+    public Guid AddressId { get; init; }
     public DateTime OrderDate { get; init; }
     public decimal Subtotal { get; init; }
     public decimal TaxAmount { get; init; }

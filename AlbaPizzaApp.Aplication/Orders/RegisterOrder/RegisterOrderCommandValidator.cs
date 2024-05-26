@@ -8,6 +8,9 @@ internal sealed class RegisterOrderCommandValidator : AbstractValidator<Register
         RuleFor(x => x.CustomerId)
             .NotEmpty().WithMessage("El ID del cliente es obligatorio.");
 
+        RuleFor(x => x.AddressId)
+            .NotEmpty().WithMessage("El ID de la dirección es obligatorio.");
+
         RuleFor(x => x.OrderDate)
             .NotEmpty().WithMessage("La fecha del pedido es obligatoria.");
 

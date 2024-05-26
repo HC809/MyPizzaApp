@@ -9,6 +9,9 @@ internal sealed class UpdateOrderCommandValidator : AbstractValidator<UpdateOrde
         RuleFor(x => x.Id)
             .NotEmpty().WithMessage("El ID del pedido es obligatorio.");
 
+        RuleFor(x => x.AddressId)
+            .NotEmpty().WithMessage("El ID de la dirección es obligatorio.");
+
         RuleFor(x => x.OrderDate)
             .NotEmpty().WithMessage("La fecha del pedido es obligatoria.");
 

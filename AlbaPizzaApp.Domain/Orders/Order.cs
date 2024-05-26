@@ -4,15 +4,17 @@ using AlbaPizzaApp.Domain.OrderDetails;
 namespace AlbaPizzaApp.Domain.Orders;
 public sealed class Order : Entity
 {
-    private Order(Guid id, Guid customerId, DateTime orderDate) : base(id)
+    private Order(Guid id, Guid customerId, Guid addressId, DateTime orderDate) : base(id)
     {
         CustomerId = customerId;
+        AddressId = addressId;
         OrderDate = orderDate;
         OrderDetails = new List<OrderDetail>();
         Status = OrderStatus.Pending;
     }
 
     public Guid CustomerId { get; private set; }
+    public Guid AddressId { get; private set; }
     public DateTime OrderDate { get; private set; }
     public decimal Subtotal { get; private set; }
     public decimal TaxAmount { get; private set; }
@@ -22,17 +24,18 @@ public sealed class Order : Entity
     public DateTime CancelDate { get; private set; }
     public ICollection<OrderDetail> OrderDetails { get; private set; }
 
-    public static Order Create(Guid customerId, DateTime orderDate)
+    public static Order Create(Guid customerId, Guid addressId, DateTime orderDate)
     {
-        return new Order(Guid.NewGuid(), customerId, orderDate);
+        return new Order(Guid.NewGuid(), customerId, addressId, orderDate);
     }
 
-    public Result Update(DateTime orderDate, ICollection<OrderDetail> orderDetails)
+    public Result Update(DateTime orderDate, Guid addressId, ICollection<OrderDetail> orderDetails)
     {
         if (Status != OrderStatus.Pending)
             return Result.Failure(OrderErrors.NotPendingToUpdate);
 
         OrderDate = orderDate;
+        AddressId = addressId;
         OrderDetails = orderDetails;
         CalculateAmounts();
 
