@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AlbaPizzaApp.Aplication\AlbaPizzaApp.Application.csproj" />
     <ProjectReference Include="..\AlbaPizzaApp.Infraestructure\AlbaPizzaApp.Infraestructure.csproj" />
   </ItemGroup>
 
