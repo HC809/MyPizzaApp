@@ -9,6 +9,7 @@ public sealed class Order : Entity
         CustomerId = customerId;
         OrderDate = orderDate;
         OrderDetails = new List<OrderDetail>();
+        Status = OrderStatus.Pending;
     }
 
     public Guid CustomerId { get; private set; }
@@ -16,6 +17,7 @@ public sealed class Order : Entity
     public decimal Subtotal { get; private set; }
     public decimal TaxAmount { get; private set; }
     public decimal TotalAmount { get; private set; }
+    public OrderStatus Status { get; private set; }
     public ICollection<OrderDetail> OrderDetails { get; private set; }
 
     public static Order Create(Guid customerId, DateTime orderDate)
@@ -34,6 +36,26 @@ public sealed class Order : Entity
         Subtotal = OrderDetails.Sum(od => od.PriceWithoutTax);
         TaxAmount = OrderDetails.Sum(od => od.TaxAmount);
         TotalAmount = OrderDetails.Sum(od => od.PriceWithTax);
+    }
+
+    public Result Confirm()
+    {
+        if (Status != OrderStatus.Pending)
+            return Result.Failure(OrderErrors.NotPending);
+
+        Status = OrderStatus.Confirmed;
+
+        return Result.Success();
+    }
+
+    public Result Cancel()
+    {
+        if (Status == OrderStatus.Cancelled)
+            return Result.Failure(OrderErrors.AlreadyCanceled);
+
+        Status = OrderStatus.Cancelled;
+
+        return Result.Success();
     }
 }
 
