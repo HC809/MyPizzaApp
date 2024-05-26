@@ -33,11 +33,9 @@ internal sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
                 value => (OrderStatus)Enum.Parse(typeof(OrderStatus), value)
             );
 
-        builder.Property(x => x.ConfirmDate)
-            .IsRequired();
+        builder.Property(x => x.ConfirmDate);
 
-        builder.Property(x => x.CancelDate)
-            .IsRequired();
+        builder.Property(x => x.CancelDate);
 
         builder.Property(x => x.CustomerId)
             .IsRequired();

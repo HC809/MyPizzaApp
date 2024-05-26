@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.API", "AlbaPiz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.Domain", "AlbaPizzaApp.Domain\AlbaPizzaApp.Domain.csproj", "{C9F2EA55-CFD6-413E-A380-C7609E817FED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.Infraestructure", "AlbaPizzaApp.Infraestructure\AlbaPizzaApp.Infraestructure.csproj", "{D519F511-40BC-497F-9AC7-645AD3BAFBF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.Infraestructure", "AlbaPizzaApp.Infraestructure\AlbaPizzaApp.Infraestructure.csproj", "{D519F511-40BC-497F-9AC7-645AD3BAFBF2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E2CE4AF0-4B89-46C4-9E97-83A53A05E37A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizza.Domain.UnitTests", "AlbaPizza.Domain.UnitTests\AlbaPizza.Domain.UnitTests.csproj", "{8DCEB165-FB20-43B4-A5E9-A1D30C3E6D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizza.Domain.UnitTests", "AlbaPizza.Domain.UnitTests\AlbaPizza.Domain.UnitTests.csproj", "{8DCEB165-FB20-43B4-A5E9-A1D30C3E6D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbaPizzaApp.ArchitectureTests", "AlbaPizzaApp.ArchitectureTests\AlbaPizzaApp.ArchitectureTests.csproj", "{4DE517CC-0D00-4425-A9AB-40FB94D72654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbaPizzaApp.ArchitectureTests", "AlbaPizzaApp.ArchitectureTests\AlbaPizzaApp.ArchitectureTests.csproj", "{4DE517CC-0D00-4425-A9AB-40FB94D72654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
