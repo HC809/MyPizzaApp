@@ -27,6 +27,18 @@ public sealed class Order : Entity
         return new Order(Guid.NewGuid(), customerId, orderDate);
     }
 
+    public Result Update(DateTime orderDate, ICollection<OrderDetail> orderDetails)
+    {
+        if (Status != OrderStatus.Pending)
+            return Result.Failure(OrderErrors.NotPendingToUpdate);
+
+        OrderDate = orderDate;
+        OrderDetails = orderDetails;
+        CalculateAmounts();
+
+        return Result.Success();
+    }
+
     public void AddOrderDetail(OrderDetail orderDetail)
     {
         OrderDetails.Add(orderDetail);
